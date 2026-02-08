@@ -14,8 +14,8 @@ module full_adder(
 	output s, cout
 );
 	wire s1, c1, c2;
-	half_adder(a, b, s1, c1);
-	half_adder(c, s1, s, c2);
+	half_adder ha1(a, b, s1, c1);
+	half_adder ha2(c, s1, s, c2);
 	
 	assign cout = c1 | c2;
 endmodule
